@@ -1,10 +1,14 @@
-import './App.css';
+import { Provider } from "react-redux";
+import "./App.css";
+import Counter from "./components/Counter";
+
+import store from "./Store";
 
 function App() {
   return (
-    <div className="App">
-      <h1> Welcome to react-redux project.</h1>
-    </div>
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   );
 }
 
